@@ -148,7 +148,7 @@ Contributions are welcome. To contribute:
 
 ## License
 
-This project may be distributed under the MIT License.
+This project may be distributed under the MIT License.  [LICENSE](LICENSE)
 
 ---
 
