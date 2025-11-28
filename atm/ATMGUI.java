@@ -62,7 +62,7 @@ public class ATMGUI {
                     int acc = Integer.parseInt(accField.getText());
                     int pin = Integer.parseInt(pinField.getText());
 
-                    BankInterface bank = (BankInterface) Naming.lookup("rmi://0.tcp.in.ngrok.io:11574/bank");
+                    BankInterface bank = (BankInterface) Naming.lookup("rmi://<YOUR IPV4 PUBLIC IP>/bank");
 
                     double bal = bank.checkBalance(acc, pin);
 
@@ -83,7 +83,7 @@ public class ATMGUI {
                     int acc = Integer.parseInt(accField.getText());
                     double amt = Double.parseDouble(amtField.getText());
 
-                    BankInterface bank = (BankInterface) Naming.lookup("rmi://0.tcp.in.ngrok.io:11574/bank");
+                    BankInterface bank = (BankInterface) Naming.lookup("rmi://<YOUR IPV4 PUBLIC IP>/bank");
 
                     boolean ok = bank.deposit(acc, amt);
 
@@ -103,7 +103,7 @@ public class ATMGUI {
                     int pin = Integer.parseInt(pinField.getText());
                     double amt = Double.parseDouble(amtField.getText());
 
-                    BankInterface bank = (BankInterface) Naming.lookup("rmi://0.tcp.in.ngrok.io:11574/bank");
+                    BankInterface bank = (BankInterface) Naming.lookup("rmi://<YOUR IPV4 PUBLIC IP>/bank");
 
                     boolean ok = bank.withdraw(acc, pin, amt);
 
@@ -123,7 +123,7 @@ public class ATMGUI {
                     int oldPin = Integer.parseInt(pinField.getText());
                     int newPin = Integer.parseInt(JOptionPane.showInputDialog(frame, "Enter new PIN:"));
 
-                    BankInterface bank = (BankInterface) Naming.lookup("rmi://0.tcp.in.ngrok.io:11574/bank");
+                    BankInterface bank = (BankInterface) Naming.lookup("rmi://<YOUR IPV4 PUBLIC IP>/bank");
 
                     boolean ok = bank.changePin(acc, oldPin, newPin);
 
