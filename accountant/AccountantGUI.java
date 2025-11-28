@@ -67,7 +67,7 @@ public class AccountantGUI {
                 }
 
                 try {
-                    BankInterface bank = (BankInterface) Naming.lookup("rmi://0.tcp.in.ngrok.io:14725/Bank");
+                    BankInterface bank = (BankInterface) Naming.lookup("rmi://<YOUR IPV4 PUBLIC IP>/Bank");
 
                     JOptionPane.showMessageDialog(frame, "Connected to Bank Server.");
 
